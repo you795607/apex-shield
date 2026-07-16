@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: apex-shield-backend
+    env: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: USE_TOR
+        value: "true"
